@@ -6,11 +6,15 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable.js";
 import { Observer } from "gsap/Observer.js";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 
 gsap.registerPlugin(
   Draggable,
   Observer,
+  ScrollTrigger,
+  MorphSVGPlugin,
   useGSAP
 );
 

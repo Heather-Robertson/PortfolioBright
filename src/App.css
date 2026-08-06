@@ -1,19 +1,14 @@
+/* --- MORPHS --- */
 
-html,
-body{
-    overflow:hidden;
-}
-
-.slider{
-    position:relative;
-    width:100%;
-    height:95vh;
-    overflow:hidden;
-}
-
-.panel{
-    position:absolute;
-    inset:0;
+.shape-overlays{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: visible; */
+  cursor: pointer;
+  pointer-events: none;
 }
 
 
@@ -32,7 +27,7 @@ header {
 
 .nav{
   width: 95vw;
-  height: 5vh;
+  height: 5%;
   margin: auto auto;
   padding: 1.5vh 1.5vw;
   display: flex;
@@ -71,7 +66,7 @@ header {
   position: relative;
 }
 
-.nav-links li button {
+.nav-links li a {
   color: var(--black);
   font-family: var(--body);
   font-size: 20px;
@@ -217,16 +212,25 @@ header {
   min-height: min-content;
   justify-self: center;
   justify-items: center;
-  background-color: var(--pink);
+  /* background-color: var(--pink); */
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background: linear-gradient(#FFFFFFB5, var(--pink) 70%);
+  /* background: radial-gradient(#FFFFFFB5, var(--pink) 100%); */
+  /* background: radial-gradient(var(--pink), #FFFFFFB5 70%); */
+
 }
 
 .hero p{
   font-family: var(--body);
-  font-size: 20px;
+  font-size: 24px;
   border-radius: 50%;
-  width: 50%;
-  background: radial-gradient(#FFFFFFB5,var(--pink) 70%);
+  width: 40%;
+  /* background: radial-gradient(#FFFFFFB5,var(--pink) 70%); */
+  /* z-index: 100; */
+  padding: 5vh;
 }
 
 /* .hero .eyebrow{
@@ -243,12 +247,14 @@ header {
   font-family: var(--title);
   font-size: 90px;
   color: var(--black);
-  margin: 0 -6px 20px;
+margin: 0 -6px 20px;
+  padding: 5vh 20vw;
   overflow-wrap: break-word;
   -webkit-text-stroke: 5px black;
 }
 
 .action-links{
+  padding: 1vh 0 0 0;
   display: inline;
   justify-self: right;
 }
@@ -262,7 +268,6 @@ header {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  z-index: 0;
 }
 
 .action-links a:hover {
@@ -274,7 +279,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* border thickness */
+  padding: 3px; /* border thickness */
   border-radius: 10px;
   background: linear-gradient(120deg, transparent, var(--blue), var(--orange), var(--pink),var(--yellow), var(--green), transparent);
   background-size: 200% 200%;
@@ -333,8 +338,9 @@ header {
 /* --- CARD SECTION --- */
 
 .card-section{
-  height: 95vh;
+  height: 100vh;
   width: 100%;
+  /* z-index: 2; */
 }
 
 #digital_craft{
@@ -406,7 +412,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 0;
+  /* z-index: 2; */
 
   border-radius: var(--radius);
   background: var(--surface);
@@ -430,6 +436,7 @@ header {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   overflow-wrap: break-word;
+  overflow: hidden;
 }
 
 .card-front a,
@@ -454,6 +461,7 @@ header {
   font-family: var(--body);
   color: var(--black);
   font-size: 20px;
+  overflow: hidden;
 }
 
 .card-back {
@@ -483,6 +491,11 @@ header {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   justify-self: center;
+}
+
+.skills-container{
+  max-height: 60%;
+  overflow: hidden;
 }
 
 .skill{
@@ -527,18 +540,23 @@ header {
   height: 100vh;
   width: 100%;
   background-color: var(--yellow);
+  z-index: 4;
 }
 
 .playground h2{
   font-family: var(--header);
   font-size: 36px;
   padding: 5vh 2vw 0 2.5vw;
+  position: relative;
+  z-index: 11;
 }
 
 .playground p{
   font-family: var(--body);
   font-size: 24px;
   padding: 0 2vw 0 2.5vw;
+  position: relative;
+  z-index: 11;
 }
 
 .playground-canvas {
@@ -557,7 +575,7 @@ header {
 
 .playground-canvas-inner {
   width: 120vw;
-  height: 95vh;
+  height: 110vh;
   position: absolute;
   inset: 0;
   cursor: pointer;  
@@ -569,7 +587,34 @@ header {
   background-size: 55px 55px; */
 }
 
+.playground-canvas-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  background-color: #333333CC;
+}
+
+.playground-canvas-overlay p{
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  inset: 0;
+  top: 1vh;
+  left: 1vw;
+}
+
+.playground-canvas-inner:hover .playground-canvas-overlay{
+  opacity: 0;
+}
+
 .playground-canvas-inner img{
+  display: block;
   width: 200px;
   height: auto;
   position: absolute;
@@ -577,10 +622,4 @@ header {
   border-radius: 10px;
   user-select: none;
   -webkit-user-drag: none;
-}
-
-.playground-canvas-inner p{
-  position: absolute;
-  top: 5.5vh;
-  left: 2.5vw;
 }

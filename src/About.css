@@ -1,0 +1,85 @@
+h1{
+    font-family: var(--title);
+    font-size: 90px;
+    padding: 2vh 5vw;
+    overflow-wrap: break-word;
+    margin: 0 -6px 20px;
+}
+
+.about-hero p{
+    font-family: var(--body);
+    font-size: 20px;
+    margin: 5vh 5vw;
+}
+
+section{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px 0 0 20px;
+}
+
+section h2{
+    font-family: var(--header);
+    font-size: 36px;
+    padding: 0 0 0 20px;
+    overflow-wrap: break-word;
+}
+
+section ul{
+    list-style: none;
+    padding: 0 0 0 20px;
+
+}
+
+section p{
+    font-family: var(--body);
+    font-size: 20px;
+}
+
+b{
+    -webkit-text-stroke: 0.5px black;
+    stroke:0.5px black;
+}
+
+#skills b{
+    -webkit-text-stroke: 0.5px white;
+    stroke:0.5px white;
+}
+
+#education{
+    background-color: var(--green);
+}
+
+#experience{
+    background-color: var(--yellow);
+}
+
+#research-experience{
+    background-color: var(--orange);
+}
+
+#skills{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+#publications{
+    background-color: var(--pink);
+}
+
+#awards{
+    background-color: var(--green);
+}
+
+#languages{
+    background-color: var(--yellow);
+}
+
+.split{
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    gap: 0;
+    justify-self: center;
+}
+
+
