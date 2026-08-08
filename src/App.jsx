@@ -238,72 +238,13 @@ function Home() {
   );
 }
 
-// function DigitalCraft(){
-//   const cards = [
-//     {ref: "/PandaBugs", title: "PandaBugs", subtitle: "Complete website overhaul for PandaBugs, Inc., a local 501(c)(3) nonprofit organization", image: PandaBugsPreview, alt: "A preview of the wireframe for PandaBugs.org", skills: [{title: "Interaction Design", className: "methods"},{title: "Information Architecture", className: "methods"},{title: "Design for Accessibility", className: "methods"},{title: "Wireframing", className: "craft"},{title: "Figma", className: "craft"},{title: "Adobe Illustrator", className: "craft"},{title: "HTML/CSS", className: "programming"},{title: "JavaScript", className: "programming"},{title: "React", className: "programming"},{title: "Git", className: "programming"}] }
-//   ];
-
-//   return(
-//     <>
-//       <header>
-//         <Nav />
-//       </header>
-//       <main>
-//         <CardSection title="Digital Craft" sectionID="digital_craft" content="User Interface and User Experience Design, Programming, and Frontend Development" cards={cards} />
-//       </main>
-//     </>
-//   )
-// }
-
-// function PhysicalCraft(){
-//   const cards = [
-//     {ref: "/BatResources", title: "Bat Resources", subtitle: "A habitat intervention and an enrichment tool both for Big Brown Bats, made for the Wildlife Rehabilitators Association of Rhode Island", image: BatResourcesPreview, alt: "A large, wooden bat house", skills:[{title: "Sustainable Design", className: "methods"},{title: "Sketching", className: "craft"},{title: "Model Making", className: "craft"},{title: "Woodworking", className: "craft"},{title: "Prototyping", className: "craft"}] },
-//     {ref: "/TossNTow", title: "Toss N' Tow", subtitle: "Interlocking, wheeled cornhole boards, designed to quickly and simply facilitate tailgate or beach day fun", image: TossnTowPreview, alt: "A set of wheeled, interlocking cornhole boards", skills:[{title: "Model Making", className: "craft"},{title: "Woodworking", className: "craft"},{title: "Adobe Illustrator", className: "craft"},{title: "Vinyl Cutting", className: "craft"},{title: "Prototyping", className: "craft"},{title: "Usability Testing", className: "methods"}]},
-//     {ref: "/LipstickFabulator", title: "Lipstick Fabulator", subtitle: "A machine capable of creating lipstick in any desired color, eliminating the need to purchase individual makeup shades", image: LipstickFabulatorPreview, alt: "A machine dispensing from three syringes of lipstick pigment", skills:[{title: "Model Making", className: "methods"},{title: "CAD/CAM", className: "craft"},{title: "Fusion 360", className: "craft"},{title: "3D Printing", className: "craft"},{title: "Laser Cutting", className: "craft"},{title: "Prototyping", className: "craft"},{title: "Arduino", className: "physical-computation"},{title: "Actuation", className: "physical-computation"},{title: "C++", className: "programming"}]},
-//   ];
-
-//   return(
-//     <>
-//       <header>
-//         <Nav />
-//       </header>
-//       <main>
-//           <CardSection title="Physical Craft" sectionID="physical_craft" content="Design Engineering, Physical Computation, Handicraft, and Prototyping" cards={cards} />
-//       </main>
-//     </>
-//   )
-// }
-
-// function Research(){
-//   const cards = [
-//     {ref: "/StitchSwitch", title: "StitchSwitch", subtitle: ["Computational characterization and design tools for embroidered bistable textiles", <br />, "UIST 2026"], image: StitchSwitchPreview, alt: "A shirt sleeve embroidered with bistable buttons and braille labels", skills:[{title: "Computational Geometry", className: "methods"},{title: "Interaction Design", className: "methods"},{title: "User Research", className: "methods"},{title: "Design for Accessibility", className: "methods"},{title: "CAD/CAM", className: "craft"},{title: "Adobe Illustrator", className: "craft"},{title: "Inkscape", className: "craft"},{title: "Machine Embroidery", className: "craft"}, {title: "Prototyping", className: "craft"},{title: "Arduino", className: "physical-computation"},{title: "Capacitive Sensing", className: "physical-computation"},{title: "Internet of Things", className: "physical-computation"},{title: "SPI", className: "physical-computation"},{title: "Soft Circuitry", className: "physical-computation"}, {title:"C++", className:"programming"}] },
-//     {ref: "/Diceplay", title: "Diceplay", subtitle: ["A low-cost, modular display for physical image composition", <br />, "SIGGRAPH 2026"], image: DiceplayPreview, alt: "An image of a fish, composed of colorfully-lit 3D-printed cubes (dice) in a frame", skills:[{title: "Computational Geometry", className: "methods"},{title: "Interaction Design", className: "methods"},{title: "User Testing", className: "methods"},{title: "Adobe Illustrator", className: "craft"},{title: "CAD/CAM", className: "craft"},{title: "Fusion 360", className: "craft"},{title: "3D Printing", className: "craft"},{title: "Soldering", className: "craft"},{title: "Prototyping", className: "craft"},{title: "Arduino", className: "physical-computation"},{title: "C++", className: "programming"}] },
-//     // {ref: "/Thesis", title: "Honors Thesis", subtitle: ['"Tilability of Platonic Solid Nets in Multiple Dimensions"',<br />, "Highest Honors, Smith College Computer Science"], image: ThesisPreview, alt: "A tiling pattern dervied from pentagons", skills:[{title: "Computational Geometry", className: "methods"},{title: "Python", className: "programming"},{title: "Mathematica", className: "programming"},{title: "TeX", className: "programming"},{title: "Model Making", className: "craft"},{title: "CAD/CAM", className: "craft"},{title: "Adobe Illustrator", className: "craft"},{title: "Laser Cutting", className: "craft"},{title: "Fusion 360", className: "craft"},{title: "3D Printing", className: "craft"}] },
-//     {ref: "/Mothitor", title: "Mothitor", subtitle: "Computational tools for remote moth population monitoring", image: MothitorPreview, alt: "A group of researchers hiking to a fieldwork site", skills:[{title: "Sustainable Design", className: "methods"},{title: "Field Testing", className: "methods"},{title: "CAD/CAM", className: "craft"},{title: "Fusion 360", className: "craft"},{title: "3D Printing", className: "craft"},{title: "Soldering", className: "craft"},{title: "Prototyping", className: "craft"},{title: "Raspberry Pi", className: "physical-computation"},{title: "Sensing", className: "physical-computation"},{title: "Actuation", className: "physical-computation"},{title: "SPI", className: "physical-computation"},{title: "I2C", className: "physical-computation"},{title: "Python", className: "programming"},{title: "OpenCV", className: "programming"},{title: "Linux", className: "programming"},{title: "Bash", className: "programming"}] },
-//   ];
-
-//   return(
-//     <>
-//       <header>
-//         <Nav />
-//       </header>
-//       <main>
-//           <CardSection title="Research" sectionID="research" content="Applied Computer Science, Computational Design, and Computational Geometry" cards={cards} />
-//       </main>
-//     </>
-//   )
-// }
-
 function App() {
   return (
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/digital-craft" element={<DigitalCraft />} />
-        <Route path="/physical-craft" element={<PhysicalCraft />} />
-        <Route path="/research" element={<Research />} />
-        <Route path="/playground" element={<Playground />}/> */}
         <Route path="/About" element={<About />} />
+        
       </Routes>
     </HashRouter>
   );

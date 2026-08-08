@@ -1,4 +1,14 @@
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './About.css'
+
+function Nav() {
+  return(
+  <nav className="nav">
+    <Link className="brand-link" to="/">Heather Robertson</Link>
+    {/* Language Button */}
+  </nav>
+  );
+}
 
 function Hero(){
     return(
@@ -58,6 +68,10 @@ export default function About(){
 
     return(
         <>
+        <header>
+            <Nav />
+        </header>
+        <main>
             <Hero />
             <div class="split">
                 <div class="col">
@@ -72,6 +86,7 @@ export default function About(){
                     <Section title="Honors and Awards" items={awardsItems} sectionID="awards" />
                 </div>
             </div>
+        </main>
         </>
     )
 }
